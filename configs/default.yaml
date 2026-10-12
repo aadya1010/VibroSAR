@@ -1,0 +1,14 @@
+# Edit ports for your machine (Windows: COM3, Linux: /dev/ttyUSB0)
+radar:
+  mode: TRACKS        # TRACKS for RD-03D. IQ only if a raw-phase radar is added later.
+  port: COM3
+  baud: 256000
+  max_targets: 3
+vibration:
+  port: COM4
+  baud: 921600
+  fs_hz: 400
+  channel_names: [target, reference]   # order must match ESP32 firmware
+  scale: 0.0039                        # ADXL345 full-res: g per count
+logging:
+  level: INFO
